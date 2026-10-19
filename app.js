@@ -12,9 +12,9 @@
     window.ym.l = Date.now();
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://mc.yandex.ru/metrika/tag.js';
+    script.src = `https://mc.yandex.ru/metrika/tag.js?id=${config.counterId}`;
     document.head.appendChild(script);
-    window.ym(config.counterId, 'init', {clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true});
+    window.ym(config.counterId, 'init', {ssr: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, referrer: document.referrer, url: location.href});
   }
   function goal(name) {
     if (analyticsReady && typeof window.ym === 'function') window.ym(config.counterId, 'reachGoal', name);
