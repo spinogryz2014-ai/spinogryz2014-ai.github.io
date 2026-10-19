@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://spinogryz2014-ai.github.io/sitemap.xml
